@@ -1,17 +1,15 @@
-import images from './assets/boykisser_dance.gif'
 import './App.css'
+import { Route, Switch } from 'wouter';
+import home from './pages/home';
 
 
-console.log(images);
 
 function App() {
 
   return (
-    <>
-    <div className='grid h-screen place-items-center'>
-    <img src={images} alt="silly image"  />
-    </div>
-    </>
+<Switch>
+<Route path="/*" component={home}></Route>
+</Switch>
   )
 }
 
